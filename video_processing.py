@@ -4,6 +4,7 @@ from io import BytesIO
 from PIL import Image
 import together
 from llama_index.llms.together import TogetherLLM
+from llama_index.schema import Document
 from groq import Groq
 from moviepy.editor import VideoFileClip
 import tempfile
@@ -129,7 +130,7 @@ def process_video(video_path):
     frame_descriptions = analyze_frames(frames)
     
     # Extract audio from video and transcribe
-    temp_audio_path = extract_audio(video_path) #, max_duration=300)
+    temp_audio_path = extract_audio(video_path)
     audio_transcription = transcribe_audio(temp_audio_path)
     
     # Clean up temporary audio file
@@ -139,12 +140,21 @@ def process_video(video_path):
     # Synthesize results
     summary = synthesize_results(frame_descriptions, audio_transcription)
     
+    # Create a Document object
+    doc = Document(
+        text=summary,
+        metadata={
+            "file_name": os.path.basename(video_path),
+            "file_path": video_path,
+            "content_type": "video_summary"
+        }
+    )
+    
     print("Video processing complete")
-    return summary
+    return doc
 
 # Usage
 video_path = "/Users/jrodge/Downloads/videoplayback.mp4"
 print(f"Starting video processing for: {video_path}")
-result = process_video(video_path)
 print("Final result:")
 print(result)
