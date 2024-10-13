@@ -1,0 +1,9 @@
+llama-index==0.11.17
+fastapi
+uvicorn
+python-multipart
+llama-parse
+llama-index-vector-stores-pinecone
+llama-index-llms-groq
+neo4j
+llama-index-graph-stores-neo4j
