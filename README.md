@@ -1,4 +1,4 @@
-# FastAPI Document Parser
+# FastAPI
 
 This repository contains a FastAPI application that parses documents using a custom document parser LlamaParser and process it using Agent powered by Llama-index.
 
@@ -6,12 +6,13 @@ This repository contains a FastAPI application that parses documents using a cus
 - Multiple file upload support
 - Document parsing using `LlamaParser`
 - Saving parsed sections into separate text files
-- Extract entities using TextExtractEntitiesAgent using `llama-index`
+- Extract entities using TextExtractEntitiesAgent using `llama-index` agents
+- Ingested entities into Neo4j instance
+- Query GraphRAG with `llama-index` agent
+- 
 
 ## Requirements
-- Python 3.7+
-- FastAPI
-- Uvicorn
+- pip install -r requirements.txt
 
 ## Setup Instructions
 
@@ -21,8 +22,13 @@ This repository contains a FastAPI application that parses documents using a cus
    - NEO4J_URI
    - NEO4J_USERNAME
    - NEO4J_PASSWORD
+   - AURA_INSTANCEID
+   - AURA_INSTANCENAME
+   - TOGETHER_API_KEY
+   - OPENAI_API_KEY
 
 
-
-Start the server:
-``` uvicorn app.main:app --reload ````
+- create virtual env
+- install the dependencies
+- Start the server:
+```uvicorn app.main:app --reload````
