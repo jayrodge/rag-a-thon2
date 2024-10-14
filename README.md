@@ -1,5 +1,7 @@
 # Timeline of You: Comprehensive Career Analysis and Documentation
 
+Our project aims to revolutionize how professionals document, analyze, and showcase their career achievements, and a part of [Agentic RAG-A-THON](https://rag-a-thon-2.devpost.com/) submission that was organized by LlamaIndex in Palo Alto, CA, USA. View our [Devpost submission](post.com/software/timeline-of-you).
+
 This repository contains a FastAPI application that parses documents using a custom document parser LlamaParser and process it using Agent powered by Llama-index.
 
 ## Features
