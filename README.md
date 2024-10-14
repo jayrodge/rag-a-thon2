@@ -11,7 +11,6 @@ This repository contains a FastAPI application that parses documents using a cus
 - Extract entities using TextExtractEntitiesAgent using `llama-index` agents
 - Ingested entities into Neo4j instance
 - Query GraphRAG with `llama-index` agent
-- 
 
 ## Requirements
 - pip install -r requirements.txt
