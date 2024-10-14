@@ -12,10 +12,10 @@ import base64
 
 print("Starting video processing script...")
 
-os.environ['GROQ_API_KEY'] = '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'
+os.environ['GROQ_API_KEY'] = '' #configure your groq api key here
 # Initialize clients
 groq_client = Groq()
-together.api_key = "336c0a4c5720db328215aacd007fccccfd51895d98e813f648473e79a9b1c99b"
+together.api_key = "" #configure your together.ai api key here
 print("Initialized API clients")
 
 # Initialize LLM for text synthesis
